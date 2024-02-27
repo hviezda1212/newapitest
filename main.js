@@ -5,9 +5,8 @@ let page = 1;
 let totalPage = 1;
 let totalResult = 0;
 const PAGE_SIZE = 10;
-const groupSize = 5;
 
-let url = new URL(`https://noonanewsapi.netlify.app/top-headlines?`);
+let url = new URL(`https://newsapi.org/v2/top-headlines?category=business&country=kr&apiKey=${API_KEY}`);
 
 const menus = document.querySelectorAll(".menus button");
 menus.forEach((menu) =>
@@ -57,27 +56,7 @@ const getNews = async () => {
 };
 
 const getLatestNews = async () => {
-  url = new URL(`https://noonanewsapi.netlify.app/top-headlines?`);
-  getNews();
-};
-
-const getNewsByCategory = async (event) => {
-  const category = event.target.textContent.toLowerCase();
-  if (category == "news") {
-    return getLatestNews();
-  }
-  url = new URL(
-    `https://noonanewsapi.netlify.app/top-headlines?category=${category}`
-  );
-  getNews();
-};
-
-const getNewsByKeyword = async () => {
-  const keyword = document.getElementById("search-input").value;
-  if (keyword == "") {
-    return getLatestNews();
-  }
-  url = new URL(`https://noonanewsapi.netlify.app/top-headlines?q=${keyword}`);
+  url = new URL(`https://newsapi.org/v2/top-headlines?category=business&country=kr&apiKey=${API_KEY}`);
   getNews();
 };
 
