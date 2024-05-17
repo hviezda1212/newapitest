@@ -3,85 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News</title>
-    <script
-      src="https://kit.fontawesome.com/dab690a483.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
+    <title>누나코인</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="side-menu" id="sideNav">
-      <button class="closebtn" onclick="closeNav()">&times;</button>
-      <div class="side-menu-list" id="menu-list">
-        <button>News</button>
-        <button>Business</button>
-        <button>Entertainment</button>
-        <button>General</button>
-        <button>Health</button>
-        <button>Science</button>
-        <button>Technology</button>
-      </div>
-    </div>
-
-    <section class="container">
-      <section>
-        <div class="pageHeader-wrapper">
+    <!-- 검색창 : 손응수 -->
+    <header></header>
+    <a href="#" class="logo"><img src="/assets/images/logo.svg" alt="" /></a>
+    <main>
+      <section class="highlights">
+        <div class="section-title">오늘의 하이라이트</div>
+        <!-- 가장 뜨거운 코인 top3 : 최주연 -->
+        <div class="hot-area highlight-area">
+          <div class="area-title hot-title">🔥 지금, 가장 뜨거운 코인 TOP5</div>
+        </div>
+        <!-- 뉴스 : 김미주 -->
+        <div class="news-area highlight-area">
+          <div class="news-title">
+            <h4>🧐 놓치지 말아야 할 코인 뉴스</h4>
+            <small>더보기 ></small>
+          </div>
+          <div id="news-board"></div>
+          <div class="news-pagination-nav">
+            <ul class="news-pagination"></ul>
+          </div>
+        </div>
+        <!-- 탐욕지수 : 손응수 -->
+        <div class="greed-chart-area highlight-area">
+          <div class="items-container">
+            <img src="" alt="" />
+            <ul class="items-list">
+              <li>가상자산</li>
+              <li>거래소</li>
+              <li>커뮤니티</li>
+              <li>서비스</li>
+              <li>가상자산 배우기</li>
+            </ul>
+          </div>
           <div>
-            <i class="fas fa-bars hide icon-button" onclick="openNav()"></i>
-            <i class="fas fa-search icon-button" onclick="openSearchBox()"></i>
-            <span id="input-area">
-              <input type="text" id="search-input" placeholder="search" />
-              <button class="search-button" onclick="getNewsByKeyword()">
-                Search
-              </button>
-            </span>
-          </div>
-          <div class="pageHeader-logo">
-            <img src="./asset/images/logo.svg" />
-          </div>
-        </div>
-        <div class="menus">
-          <button>News</button>
-          <button>Business</button>
-          <button>Entertainment</button>
-          <button>General</button>
-          <button>Health</button>
-          <button>Science</button>
-          <button>Technology</button>
-        </div>
-      </section>
-      <section id="news-board">
-        <div class="row news">
-          <div class="col-lg-4">
-            <img class="news-img" src="" />
-          </div>
-          <div class="col-lg-8">
-            <h2>코딩알려주는 누나</h2>
-            <p>화이팅</p>
-            <div>KBS 2024-02-19</div>
+            <div>반감기:54일</div>
+            <div>관심 목록</div>
+            <div>포트폴리오</div>
+            <input type="text" class="input-box" placeholder="검색" />
           </div>
         </div>
       </section>
 
-      <nav aria-label="Page navigation example" class="pagination-nav">
-        <ul class="pagination">
-        </ul>
-      </nav>
-    </section>
+      <!-- 코인차트 : 박종석 -->
+      <div class="section-title">오늘의 시가총액별 상위 100개의 가상 자산</div>
+      <section class="coin-chart">
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Symbol</th>
+              <th>Price</th>
+              <th>1h %</th>
+              <th>24h %</th>
+              <th>7dh %</th>
+              <th>Market Cap</th>
+              <th>Volume(24h)</th>
+              <th>Circulating Supply</th>
+            </tr>
+          </thead>
+          <tbody id="table-data"></tbody>
+        </table>
+      </section>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <p>1</p><p>1</p><p>1</p><p>1</p>
+      <div class="scroll-to-top" id="scrollToTop">
+        <a class="icon-up">
+        </a>
+      </div>
+    </main>
+    <footer></footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
